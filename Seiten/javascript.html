@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+    <head>
+      <title>Javascript</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../Bilder/favicon.ico">
+        <link rel="stylesheet" href="CSS/javascript.css"> 
+            <meta charset="utf-8">
+            <title></title>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+        <header>
+          <a id="home" href="../index.html"><img src="../bilder/Lights & Lenses_white.png" height="150px"></a>
+          <div class="dropdown">
+              <button class="dropbtn"><div class="dop" onclick="myFunction(this)">
+              <div class="bar1" style=" background-color: whitesmoke;"></div>
+              <div class="bar2" style=" background-color: whitesmoke;"></div>
+              <div class="bar3" style=" background-color: whitesmoke;"></div>
+          </div> </button>
+          <div class="dropdown-content">
+              <a href="../index.html" style="color: whitesmoke;">Start</a>
+              <a href="Foto.html" style="color: whitesmoke;">Fotografie</a>
+              <a href="Illustrationen.html" style="color: whitesmoke;">Illustrationen</a>
+              <a href="javascript.html" style="color: whitesmoke; font-weight: bold;">javascript</a>
+              <a href="../index.html#about" style="color: whitesmoke;">Über uns</a>
+          </div>
+      </div>
+        </header>
+        <div class="gallery-section">
+            <div class="inner-width">
+              <h1>Javascript</h1>
+              <div class="border"></div>
+            </div>
+          </div>
+
+          <!--Ab heir kommt der Javascript Teil. Oben Header unten Footer-->
+          <div class="lieral" style="padding-bottom: 50px;padding-top: 50px;">
+            <h2 style="color: whitesmoke;text-align: center;">JSON</h2>
+            </div>
+          <div class="jsonn">
+          <div class="container">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4" style="color: whitesmoke;">Arztbesuchertool</h1>
+                    <p class="lead" style="color: whitesmoke;">JSON Manager X</p>
+                </div>
+            </div>
+        
+            <div style="margin-bottom: 3rem"></div>
+            <div class="oben">
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">Kunde(in)</div>
+                        <ul class="list-group list-group-flush">
+                            <li id="identification" class="list-group-item">?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">Krankenkasse</div>
+                        <ul class="list-group list-group-flush">
+                            <li id="Krankenkasse" class="list-group-item">?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-bottom: 1.5rem"></div>
+        
+            <!-- Ausgabe -->
+            <div class="oben">
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <div id="alterTitle" class="card-header">Letzter Besuch</div>
+                        <ul class="list-group list-group-flush">
+                            <li id="last" class="list-group-item"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" style="width: 18rem;">
+                        <div id="allTitle" class="card-header">Allgemeine Infos</div>
+                        <ul class="list-group list-group-flush">
+                            <li id="alter" class="list-group-item"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <div style="margin-bottom: 2rem"></div>
+            <!-- Seitenzahl -->
+            <nav aria-label="Page navigation example">
+                <ul id="pagination" class="pagination">
+                    <td class="page-item">
+                        <a class="page-link" onclick="showPrevious();">letztes</a>
+                    </td>
+                    <li class="page-item"><p class="page-link" id="showIndex" style="color: white;"></p></li>
+                    <td class="page-item">
+                        <a class="page-link" onclick="showNext()">Nächstes</a>
+                    </td>
+                </ul>
+            </nav>
+        
+        </div>
+        </div>
+        <div class="border"></div>
+        <div class="Showroom">
+            <h2 style="color: whitesmoke;text-align: center;padding-bottom: 50px;">HTML DOM</h2>
+            <div class="ani">
+            <div outline>
+            <p><button onclick="myMove()" style="margin-bottom: 10px; size: 10px; padding: 5px;">Animation testen</button></p> 
+
+                <div id ="container">
+                <div id ="animate"></div>
+                </div>
+            </div>
+                <script>
+                function myMove() {
+                var elem = document.getElementById("animate");   
+                var pos = 0;
+                var id = setInterval(frame, 2);
+                function frame() {
+                    if (pos == 350) {
+                    clearInterval(id);
+                    } else 
+                    {
+                    pos++; 
+                    elem.style.top = pos + "px"; 
+                    elem.style.left = pos + "px"; 
+                    }
+                }
+                }
+                </script>
+            </div>
+            <div class="time">
+                <button id="myBtn">Zeit anzeigen lassen</button>
+
+                <p id="demo" style="color: whitesmoke;"></p>
+
+                <script>
+                document.getElementById("myBtn").addEventListener("click", displayDate);
+
+                function displayDate() {
+                document.getElementById("demo").innerHTML = Date();
+                }
+                </script>
+            </div>
+            <div class="rechner">
+        <div class="container">
+            <div class="calculator">
+              <div class="calculator__display">0</div>
+              <div class="calculator__keys">
+                <button data-key="plus" data-type="operator">+</button>
+                <button data-key="minus" data-type="operator">-</button>
+                <button data-key="times" data-type="operator">&times;</button>
+                <button data-key="divide" data-type="operator">÷</button>
+                <button data-key="1" data-type="number">1</button>
+                <button data-key="2" data-type="number">2</button>
+                <button data-key="3" data-type="number">3</button>
+                <button data-key="4" data-type="number">4</button>
+                <button data-key="5" data-type="number">5</button>
+                <button data-key="6" data-type="number">6</button>
+                <button data-key="7" data-type="number">7</button>
+                <button data-key="8" data-type="number">8</button>
+                <button data-key="9" data-type="number">9</button>
+                <button data-key="0" data-type="number">0</button>
+                <button class="decimal" data-type="number">.</button>
+                <button class="clear" data-type="clear">C</button>
+                <button data-key="equal" data-type="equal">=</button>
+              </div>
+            </div>
+          </div>
+        </div>
+          <script src="javascript/javascript.js"></script>
+        </div>
+        <div class="border"></div>
+        <div class="lieral" style="padding-bottom: 50px;padding-top: 50px;">
+        <h2 style="color: whitesmoke;text-align: center;">Object Literals</h2>
+        <p style="text-align: center;color: whitesmoke;">siehe Konsole</p>
+        </div>
+        <div class="border"></div>
+        
+        <script src="Javascript/Json_Daten.js"></script>
+        <script src="Javascript/Json_applikation.js"></script>
+          <!--Unten kommt footer-->
+          <footer>
+            <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+                <div class="container">
+                   <div class="row">
+                   
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <ul class="adress">
+                                     <span>Adresse</span>    
+                                     <li>
+                                        <p>Lights & Lensen | 
+                                           Zürcherstrasse 35 |
+                                         Dübendorf 8600
+                                        </p>
+                                      </li>
+                                           
+                                      <li>
+                                        <p>+41 79 123 45 67</p>
+                                      </li>
+                                           
+                                      <li>
+                                        <p>info@swisscom.com</p>
+                                      </li>
+                                 </ul>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <ul class="contact">
+                                     <span>Kontakt</span>    
+                                     <li>
+                                        <a href="#">Home</a>
+                                      </li>
+                                           
+                                      <li>
+                                         <a href="../index.html#about">About</a>
+                                      </li>
+                                           
+                                      <li>
+                                        <a href="Foto.html">Fotografie</a>
+                                      </li>
+                                           
+                                      <li>
+                                         <a href="Illustrationen.html">Illustrationen </a>
+                                      </li>
+                                </ul>
+                            </div>
+                       
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                               <ul class="social">
+                                          <span>Social</span>    
+                                           <li>
+                                                <a href="https://www.instagram.com"> Instagram |</a>
+                                          </li>
+                                          <li>
+                                                <a href="https://www.facebook.com"> Facebook |</a>
+                                          </li> 
+                                          <li>
+                                            <a href="https://www.Github.com"> Github |</a>
+                                          </li>  
+                                          <li>
+                                            <a href="https://www.linkedin.com"> Linkedin</a>
+                                          </li>                              
+                                 </ul>
+                        </div>
+                   </div> 
+                </div>
+        </footer>
+    </body)
